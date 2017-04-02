@@ -1,4 +1,4 @@
-# Bootstrap Combogrid
+# Bootstrap Combobox
 
 JQuery Plugins Ajax Combobox with Bootstrap interface.
 
