@@ -155,6 +155,7 @@
 
 		function blur(){
 			focused = false;
+			if (o.escape) {return;}
 			select();
 			if (!o.selected) {select();}
 			if (!mousedover && o.shown) {setTimeout(function () { hide(); o.page = 1; }, 200);}
@@ -472,6 +473,7 @@
 
 				case 27: // escape
 					if (!o.shown) {return;}
+					o.escape = true;
 					hide();
 					break;
 
