@@ -18,6 +18,7 @@ col.push(BSHelper.Combobox({ label:"Province", idname:"province_id", url:"<?=$ba
 col.push(BSHelper.Combobox({ label:"City", idname:"city_id", url:"<?=$base_url;?>systems/c_3city", value: -1, remote:true }));
 col.push(BSHelper.Combobox({ label:"District", idname:"district_id", url:"<?=$base_url;?>systems/c_4district", value: -1, remote:true }));
 col.push(BSHelper.Combobox({ label:"Village", idname:"village_id", url:"<?=$base_url;?>systems/c_5village", value: -1, remote:true }));
+col.push(BSHelper.Combobox({ label:"Role (Default)", idname:"user_role_id", textField:"code_name", url:"<?=$base_url;?>systems/a_user_role?filter=user_id=11", remote:true }));
 col.push(BSHelper.Combobox({ label:"Date Format", idname:"date_format", required:true, 
 	list:[
 		{ id:"dd/mm/yyyy", name:"dd/mm/yyyy" },
@@ -48,13 +49,8 @@ col.push( BSHelper.Button({ type:"button", idname:"btn-version", label:"Version"
 form.append(subRow(subCol(12, col)));
 $('body').append( form );
 
-/* $("#country_id").shollu_cb({ 
-	url: $(this).attr('url'),
-	idField: 'id',
-	textField: 'name',
-	emptyMessage: '<center><b>No results were found</b></center>',
-	remote: $(this).attr('remote'),
-}); */
+$("#country_id").shollu_cb('setValue', 1);
+$("#date_format").shollu_cb('setValue', 'dd-mm-yyyy');
 
 $("#country_id").shollu_cb({ 
 	onSelect: function(rowData){
