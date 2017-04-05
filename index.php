@@ -53,6 +53,13 @@ $("#country_id").shollu_cb('setValue', 1);
 $("#date_format").shollu_cb('setValue', 'dd-mm-yyyy');
 
 $("#country_id").shollu_cb({ 
+	onChange: function(rowData){
+		console.log('onChange:');
+		console.log(rowData);
+		$("#province_id")
+			.shollu_cb({ queryParams: { "country_id":rowData.id } })
+			.shollu_cb('setValue', '');
+	},
 	onSelect: function(rowData){
 		console.log('onSelect:');
 		console.log(rowData);
