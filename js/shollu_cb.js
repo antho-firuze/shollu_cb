@@ -236,7 +236,7 @@
 			}
 			/* Menu selected but not same with current and mouse klik outside */
 			if ((id_new != '') && (id_old != '') && !o.mousedover) {
-				// console.log('1.5'); 
+				// console.log('1.75'); 
 				$menu.find('.active').removeClass('active');
 				return hide(); 
 			}
@@ -356,10 +356,6 @@
 				var bottom = top + active.height();
 				var scrollTop = $menu.scrollTop();
 				var menuHeight = $menu.height();
-			console.log('top:'+active.position().top);
-			console.log('bottom:'+top + active.height());
-			console.log('scrollTop:'+$menu.scrollTop());
-			console.log('menuHeight:'+$menu.height());
 				if(bottom > menuHeight){
 						$menu.scrollTop(scrollTop + bottom - menuHeight);
 				} else if(top < 0){
