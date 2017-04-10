@@ -49,7 +49,9 @@ col.push( BSHelper.Button({ type:"button", idname:"btn-version", label:"Version"
 form.append(subRow(subCol(12, col)));
 $('body').append( form );
 
-$("#country_id").shollu_cb('setValue', 1);
+$("#country_id").shollu_cb({ addition: { "id":0, "name":"Non Standard" } });
+
+// $("#country_id").shollu_cb('setValue', 1);
 $("#date_format").shollu_cb('setValue', 'dd-mm-yyyy');
 
 $("#country_id").shollu_cb({ 
